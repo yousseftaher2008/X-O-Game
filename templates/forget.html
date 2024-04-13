@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    {% if check %}
+        <div class="alert alert-primary" role="alert">
+            {{massege}}
+        </div>
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            {{massege}}
+        </div>
+    {% endif %}
+    <form action="/forget" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="code" name="code" placeholder="Security_Code" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="NEW_Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="NEW_Password (again)" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    {% if check == "no" %}
+        <div class="alert alert-primary" role="alert">
+            {{massege}}
+        </div>
+    {% elif check %}
+        <div class="alert alert-success" role="alert" style="text-align:center;">
+            {{massege1}}<br><span style="color:red;">{{code}}</span>This is your "SECURITY_CODE" don't forget it<br>{{massege2}}
+        </div>
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            {{massege}}
+        </div>
+    {% endif %}
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+            <a href="/forget" style="margin-top:0.5em; font-size:15px; text-decoration:none; color:red;">Forget Password</a>
+        </div>
+        <button class="btn btn-primary"  type="submit">Log In</button>
+    </form>
+{% endblock %}

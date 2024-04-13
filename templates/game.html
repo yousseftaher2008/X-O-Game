@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="container2">
+        <div class="score">
+            <span id="score1" class="player1score">Player One Score: 0</span>
+            <span id="score2" class="player2score">Player Two Score: 0</span>
+        </div>
+        <div class="gamefield">
+            <div class="cells">
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+            </div>
+
+            <div class="cells">
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+            </div>
+
+            <div class="cells">
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+                <span class="cell"><span class="x"></span><span class="o"></span></span>
+            </div>
+            <div class="win" id="game"></div>
+        </div>
+
+        <div>
+            <button id="restart" class="restart">Restart</buttun>
+        </div>
+
+    </div>
+        {% if massege == "2" %}
+            <script src="/static/xo.js"></script>
+        {% elif massege == "e" %}
+            <script src="/static/ex.js"></script>
+        {% elif massege == "m" %}
+            <script src="/static/mx.js"></script>
+        {% elif massege == "h" %}
+            <script src="/static/hx.js"></script>
+        {% elif massege == "i" %}
+            <script src="/static/ix.js"></script>
+        {% endif %}
+
+
+{% endblock %}

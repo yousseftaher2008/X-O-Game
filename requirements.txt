@@ -1,0 +1,5 @@
+Flask-Mail
+cs50
+Flask
+Flask-Session
+requests

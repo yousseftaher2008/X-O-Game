@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    <form action="/game" method="post">
+        <div class="mode">
+            {% if mode%}
+                {% if check %}
+                    <div class="alert alert-danger" role="alert">
+                        {{massege}}
+                    </div>
+                {% endif %}
+                <input type="radio" name="player" value="easy" id="easy">
+                <label for="easy">EASY</label><br>
+
+                <input type="radio" name="player" value="medium" id="medium">
+                <label for="medium">MEDIUM</label><br>
+
+                <input type="radio" name="player" value="hard" id="hard">
+                <label for="hard">HARD</label><br>
+
+                <input type="radio" name="player" value="imp" id="imp">
+                <label for="imp">IMPOSSIBLE</label>
+
+                <button class="btn-1" type="submit">START!</button>
+            {% else %}
+                {% if check %}
+                <div class="alert alert-danger" role="alert">
+                    {{massege}}
+                </div>
+                {% endif %}
+                    <input type="radio" name="player" value="player" id="player">
+                    <label for="player">2 PLAYER</label><br>
+                    <input type="radio" name="player" value="computer" id="computer">
+                    <label for="computer">COMPUTER</label>
+                <button class="btn-1" type="submit">OK!</button>
+            {% endif %}
+
+        </div>
+    </form>
+{% endblock %}
