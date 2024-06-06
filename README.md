@@ -80,6 +80,9 @@ Follow these instructions to get a copy of the project up and running on your lo
 6. *Access the application:*
     Open your web browser and go to http://127.0.0.1:5000
 
+## Note
+
+If you are unable to run the application, you can still see the game in action by watching this [YouTube video](https://youtu.be/S9TiQZ7sxv0).
 ## Acknowledgments
 
 This game was developed after completing the [CS50X course](https://cs50.harvard.edu/x/2022/). The course was instrumental in advancing my programming skills. Thank you to the entire CS50 team and thank you David!
